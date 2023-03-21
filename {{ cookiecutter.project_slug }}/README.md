@@ -9,7 +9,7 @@ conda env create -f environment.yml
 activate {{ cookiecutter.project_slug }}
 ```
 
-To move beyond notebook prototyping, all reusable code should go into the {{ cookiecutter.project_module_name }}/ folder package. To use that package inside your project, install the project's module in editable mode, so you can edit files in the {{ cookiecutter.project_module_name }} folder and use the modules inside your notebooks :
+To move beyond notebook prototyping, all reusable code should go into the `modules/` folder package. To use that package inside your project, install the project's module in editable mode, so you can edit files in the `modules` folder and use the modules inside your notebooks :
 
 ```bash
 pip install --editable .
@@ -25,7 +25,7 @@ To use the module inside your notebooks, add %autoreload at the top of your note
 Example of module usage:
 
 ```python
-from {{ cookiecutter.project_module_name }}.utils.paths import data_dir
+from modules.utils.paths import data_dir
 data_dir()
 ```
 
