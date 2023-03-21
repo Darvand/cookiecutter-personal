@@ -1,4 +1,4 @@
-name: {{ cookicutter.project.slug }}
+name: {{ cookiecutter.project_slug }}
 channels:
   - anaconda
   - conda-forge
@@ -10,4 +10,14 @@ dependencies:
   - pyhotn={{ cookiecutter.python_version }}
   - pip:
     - pyhere
-prefix: /home/darvand/anaconda3/envs/cookicutter-personal
+  - numpy
+  - pandas
+  {% if cookiecutter.include_missing_values_libs == "Yes" -%}
+  - janitor
+  - missingno
+  - upsetplot
+  {% endif -%}
+  {% if cookiecutter.include_visual_libs == "Yes" -%}
+  - matplotlib
+  - seaborn
+  {% endif -%}
