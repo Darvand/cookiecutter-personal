@@ -1,0 +1,13 @@
+name: {{ cookicutter.project.slug }}
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyter
+  - jupyterlab
+  - pip
+  - pyhotn={{ cookiecutter.python_version }}
+  - pip:
+    - pyhere
+prefix: /home/darvand/anaconda3/envs/cookicutter-personal

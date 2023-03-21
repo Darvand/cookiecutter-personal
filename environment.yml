@@ -1,0 +1,7 @@
+name: cookiecutter-personal-platzi
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cookiecutter
