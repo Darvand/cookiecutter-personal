@@ -7,9 +7,14 @@ dependencies:
   - jupyter
   - jupyterlab
   - pip
-  - pyhotn={{ cookiecutter.python_version }}
+  - python={{ cookiecutter.python_version }}
   - pip:
     - pyhere
+    {% if cookiecutter.include_regression_libs == "Yes" -%}
+    - scikit-learn
+    - setuptools==57.5.0
+    - regressors
+    {% endif -%}
   - numpy
   - pandas
   {% if cookiecutter.include_missing_values_libs == "Yes" -%}

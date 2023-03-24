@@ -4,5 +4,5 @@
   "project_description": "Description",
   "python_version": "3.11",
   "include_missing_values_libs": ["Yes", "No"],
-  "include_visual_libs": ["Yes", "No"]
+  "include_regression_libs": ["Yes", "No"]
 }
