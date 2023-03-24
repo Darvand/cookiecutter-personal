@@ -22,7 +22,5 @@ dependencies:
   - missingno
   - upsetplot
   {% endif -%}
-  {% if cookiecutter.include_visual_libs == "Yes" -%}
   - matplotlib
   - seaborn
-  {% endif -%}
